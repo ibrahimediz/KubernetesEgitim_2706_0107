@@ -1,2 +1,45 @@
-Özge
-ben geldim
+# 1. Birbirinde farklı meyvelerin yer aldığı bir liste oluşturalım
+# 2. Aşağıdaki bilgilerden faydalanarak meyvelere ait kalori ve renk bilgilerini yazalım (sözlük şeklinde)
+# 3. Sözlük şeklinde olan bu bilgilerin bir liste halinde tutulmasını sağlayalım 
+
+# isim - kalori - renk
+# Portakal - 300 - turuncu
+# Elma - 400 - sarı
+# Karpuz - 200 - kırmızı
+
+# Tüm egzersizi selam.yaml dosyalarında gerçekleştirebiliriz
+
+Meyve: Elma
+Sebze: Portakal
+# # işareti açıklama için kullanılır
+# aşağıda bir liste tanımladık
+meyveler:
+    - Elma
+    - Portakal
+    - Karpuz
+    - Kırık Karpuz
+# aşağıda bir sözlük tanımladık
+containers:
+  isim: "myapp"
+  resim: "<Image>"
+  gecikme: "5s"
+# liste sıralıdır
+# sözlük sıralı değildir
+# liste içinde sözlük
+ornek:
+  isim:
+    - Mehmet
+    - Selim
+  resim: "<Image>"
+  gecikme: "5s"
+# sözlüklerin listesi
+ornek2:
+  isim:
+    - Mehmet
+    - Selim
+  resim:
+    - "<Image>"
+    - "<Image>"
+  gecikme:
+    - "5s"
+    - "5s"
