@@ -1,0 +1,20 @@
+Meyveler:
+  - Portakal
+  - Karpuz
+  - Elma
+
+
+Portakal:
+
+
+detaylar:
+ - portakal: 
+      kalori: 400
+      renk: "Turuncu"
+ - Karpuz: 
+      kalori: 400
+      renk: "Yeşil"
+ - Elma:
+    kalori: 500
+    renk: "Kirmizi"
+
