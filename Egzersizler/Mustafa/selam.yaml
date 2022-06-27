@@ -6,7 +6,7 @@
 # Portakal - 300 - turuncu
 # Elma - 400 - sarı
 # Karpuz - 200 - kırmızı
-
+ 
 # Tüm egzersizi selam.yaml dosyalarında gerçekleştirebiliriz. 
 
 #sadece meyveler
@@ -14,7 +14,7 @@ Meyveler: # 1.
   - Portakal
   - Elma
   - Karpuz
-  #Sözlük
+#kalori-renk bilgileri
 Portakal:
   kalori: 300
   renk: "turuncu"
@@ -24,6 +24,7 @@ Elma:
 Karpuz:
   kalori: 200
   renk: "kırmızı"
+#Sözlük
 MeyveKalori: # 3.
   - Portakal:
     kalori: 300

@@ -1,13 +1,21 @@
+# 1. soru
 Meyveler:
   - Portakal
   - Karpuz
   - Elma
 
-
+# 2. soru
 Portakal:
+  kalori: 400
+  renk: "Turuncu"
+Karpuz:
+  kalori: 400
+  renk: "Turuncu"
+Elma:
+  kalori: 400
+  renk: "Turuncu"
 
-
-
+# 3. soru
 detaylar:
  - Portakal: 
       kalori: 400
@@ -19,3 +27,8 @@ detaylar:
     kalori: 500
     renk: "Kirmizi"
 
+
+
+
+
+# 

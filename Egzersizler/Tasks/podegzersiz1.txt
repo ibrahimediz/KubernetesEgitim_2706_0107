@@ -1,0 +1,5 @@
+iki pod oluşturulması isteniyor 
+1. nginx imajı ile webfrontend ismi ile bir pod oluşturalım
+2. mariadb imajı ile webdb ismi ile bir pod oluşturalım
+3. bu podların tanımlarına bakalım. 
+tüm bu kodları podEgzeris.txt dosyası içerisinde sırasıyla yazabilir.

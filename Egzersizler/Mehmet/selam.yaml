@@ -26,20 +26,20 @@ Meyveler:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: TestApp
+  name: webfrontend
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: TestApp
+      app: webfrontend
   template:
     metadata:
       labels:
-        app: TestApp
+        app: webfrontend
     spec:
       containers:
-      - name: TestApp
-        image: redis
+      - name: webfrontend
+        image: nginx
         resources:
           limits:
             memory: "128Mi"

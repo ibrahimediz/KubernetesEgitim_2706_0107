@@ -14,22 +14,22 @@ meyveler: # 1.
     - Portakal
     - Elma
     - Karpuz
+Portakal: # 2. 
+    kalori: "300"
+    renk: "Turuncu"
+Elma:  
+    kalori: "400"
+    renk: "Sari"
+Karpuz: 
+    kalori: "200"
+    renk: "Kirmizi"
 meyvelist: # 3.
   - Portakal:
-     kalori: 300
-     renk: Turuncu
+     kalori: "300"
+     renk: "Turuncu"
   - Elma:
-     kalori: 400
-     renk: Sarı
+     kalori: "400"
+     renk: "Sari"
   - Karpuz:
-     kalori: 200
-     renk: Kırmızı                 
-Portakal: # 2. 
-    kalori: 300
-    renk: Turuncu
-Elma: # 2. 
-    kalori: 400
-    renk: Turuncu
-Karpuz: # 2. 
-    kalori: 200
-    renk: Turuncu
+     kalori: "200"
+     renk: "Kirmizi"                
