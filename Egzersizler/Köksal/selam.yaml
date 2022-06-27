@@ -10,5 +10,36 @@
 # Tüm egzersizi selam.yaml dosyalarında gerçekleştirebiliriz. 
 
 MveListesi: 
-    - 
-    
+    -
+    - Elma
+    - Karpuz
+  
+Portakal:
+  isim: Portakal
+  Kalori: 300
+  Renk: Turuncu
+
+Elma:
+  isim: Elma
+  Kalori: 400
+  Renk: Sari
+
+Karpuz:
+  isim: Karpuz
+  Kalori: 200
+  Renk: Kirmizi
+
+meyveListe:
+    - Portakal:
+        isim: Portakal
+        Kalori: 300
+        Renk: Turuncu
+    - Elma:
+        isim: Elma
+        Kalori: 400
+        Renk: Sari
+    - Karpuz:
+        isim: Karpuz
+        Kalori: 200
+        Renk: Kirmizi
+

@@ -10,3 +10,34 @@
 
 # Tüm egzersizi selam.yaml dosyalarında gerçekleştirebiliriz. 
 
+
+Meyveler:
+    - Elma
+    - Portakal
+    - Karpuz
+
+dictionaryElma:
+  isim: "elma"
+  kalori: "400"
+  renk: "kırmızı"
+
+dictionaryPortakal:
+  isim: "portakal"
+  kalori: "300"
+  renk: "turuncu"
+
+dictionaryKarpuz:
+  isim: "karpuz"
+  kalori: "200"
+  renk: "yeşil"
+
+listeler:
+  - dictionaryKarpuz:
+      kalori: 200
+      renk: yeşil
+  - dictionaryElma:
+      kalori: "400"
+      renk: "kırmızı"
+  - dictionaryPortakal:
+      kalori: "300"
+      renk: "turuncu"

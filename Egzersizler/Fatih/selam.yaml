@@ -9,3 +9,46 @@
 #
 #Tüm egzersizi selam.yaml dosyalarında gerçekleştirebiliriz. 
 
+list:
+  - Elma
+  - Portakal
+  - Karpuz
+
+Elma:
+  isim: "Elma"
+  kalori: "400"
+  renk: "sarı"
+
+Portakal:
+  isim: "Portakal"
+  kalori: "300"
+  renk: "turuncu"
+
+Karpuz:
+  isim: "Karpuz"
+  kalori: "200"
+  renk: "kırmızı"
+
+
+properties:
+  Elma:
+    isim:
+      - Elma
+    kalori:
+      - 400
+    renk:
+      - sarı
+  Portakal:
+    isim:
+      - Portakal
+    kalori:
+      - 300
+    renk:
+      - turuncu
+  Karpuz:
+    isim:
+      - Karpuz
+    kalori:
+      - 200
+    renk:
+      - kırmızı

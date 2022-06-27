@@ -9,37 +9,27 @@
 
 # Tüm egzersizi selam.yaml dosyalarında gerçekleştirebiliriz
 
-Meyve: Elma
-Sebze: Portakal
-# # işareti açıklama için kullanılır
-# aşağıda bir liste tanımladık
-meyveler:
-    - Elma
+
+meyveler: # 1.
     - Portakal
+    - Elma
     - Karpuz
-    - Kırık Karpuz
-# aşağıda bir sözlük tanımladık
-containers:
-  isim: "myapp"
-  resim: "<Image>"
-  gecikme: "5s"
-# liste sıralıdır
-# sözlük sıralı değildir
-# liste içinde sözlük
-ornek:
-  isim:
-    - Mehmet
-    - Selim
-  resim: "<Image>"
-  gecikme: "5s"
-# sözlüklerin listesi
-ornek2:
-  isim:
-    - Mehmet
-    - Selim
-  resim:
-    - "<Image>"
-    - "<Image>"
-  gecikme:
-    - "5s"
-    - "5s"
+meyvelist: # 3.
+  - Portakal:
+     kalori: 300
+     renk: Turuncu
+  - Elma:
+     kalori: 400
+     renk: Sarı
+  - Karpuz:
+     kalori: 200
+     renk: Kırmızı                 
+Portakal: # 2. 
+    kalori: 300
+    renk: Turuncu
+Elma: # 2. 
+    kalori: 400
+    renk: Turuncu
+Karpuz: # 2. 
+    kalori: 200
+    renk: Turuncu

@@ -9,4 +9,16 @@ Meyveler:
     - 300
     - 400
     - 200
-      
+  Renkler:
+    - Turuncu
+    - Sarı
+    - Kırmızı
+
+Meyve:
+  - Portakal
+  - Elma
+  - Karpuz
+
+Özellikler:
+  - Portakal:
+    

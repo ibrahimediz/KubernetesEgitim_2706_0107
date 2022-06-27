@@ -1,1 +1,32 @@
 #Ayşenur
+Meyveler:
+  - Portakal
+  - Elma
+  - Karpuz
+
+Portakal: 
+ kalori: 300
+ renk: turuncu
+
+Elma:
+ kalori: 400
+ renk: sarı
+
+Karpuz:
+ kalori: 200
+ renk: kırmızı 
+
+Meyve Listesi:
+  - Portakal:
+     kalori: 300
+     renk: turuncu
+  - Elme:
+     kalori: 400
+     renk: sarı 
+  - Karpuz:
+     kalori: 200
+     renk: kırmızı   
+MeyvelerList:
+  - Elma:
+    kalori: 400
+    renk: sarı

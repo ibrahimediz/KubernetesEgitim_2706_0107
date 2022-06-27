@@ -1,2 +1,26 @@
-Banu
-selam
+meyveler:
+  - portakal
+  - elma
+  - karpuz
+
+portakal:
+  kalori: 300
+  renk: "turuncu"
+elma:
+  kalori: 400
+  renk: "sarı"
+karpuz:
+  kalori: 200
+  renk: "kırmızı"
+
+
+detaylar:
+  - portakal:
+      kalori: "300"
+      renk: "turuncu"
+  - elma:
+      kalori: "400"
+      renk: "sarı"
+  - karpuz:
+      kalori: "200"
+      renk: "kırmızı"

@@ -1,9 +1,27 @@
-1. Birbirinde farklı meyvelerin yer aldığı bir liste oluşturalım
-2. Aşağıdaki bilgilerden faydalanarak meyvelere ait kalori ve renk bilgilerini yazalım (sözlük şeklinde)
-3. Sözlük şeklinde olan bu bilgilerin bir liste halinde tutulmasını sağlayalım 
+Meryveler: 
+  - Portakal
+  - Elma
+  - Karpuz
 
-isim - kalori - renk
-Portakal - 300 - turuncu
-Elma - 400 - sarı
-Karpuz - 200 - kırmızı
+Portakal:
+  Kalori: 300
+  Renk: turuncu
 
+Elma:
+  Kalori: 400
+  Renk: sarı
+
+Karpuz:
+  Kalori: 200
+  Renk: kırmızı
+
+meyveListe:
+  - Portakal:
+      Kalori: 300
+      Renk: sarı
+  - Elma: 
+      Kalori: 400
+      Renk: sarı
+  - Karpuz:
+      Kalori: 200
+      Renk: kırmızı
