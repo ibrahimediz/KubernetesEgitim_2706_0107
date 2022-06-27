@@ -1,5 +1,5 @@
 ## TODO burada liste eklenecek
-liste = ["Fatih","Gokhan","Mehmet","Ayşenur","Tahir","Banu","Bekir","Emre","Köksal","Mustafa","Talha","Özge","Özlem"]
+liste = ["Fatih","Gokhan","Mehmet","Ayşenur","Tahir","Banu","Bekir","Emre","Köksal","Mustafa","Talha","Özge","Özlem","İbrahim"]
 folderName = "Egzersizler"
 fileName = "selam.yaml" 
 import os
