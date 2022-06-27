@@ -1,0 +1,13 @@
+meyveler:
+  portakal
+  elma
+  karpuz
+detaylar:
+  portakal:
+    kalori: "300"
+    renk: "turuncu"
+  elma:
+    kalori: "400"
+    renk: "sarı"
+  karpuz:
+    kalori:

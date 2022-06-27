@@ -1,1 +1,12 @@
-Talha - Ben geldim
+# Birbirinden faklı meyvelerin yer aldığı list
+# Bilgilerden faydalanarak meyveler ait kalori  ve renk bilgilerini yazalım
+Meyveler:
+  İsimler:
+    - Portakal
+    - Elma
+    - Karpuz
+  Kaloriler:
+    - 300
+    - 400
+    - 200
+      

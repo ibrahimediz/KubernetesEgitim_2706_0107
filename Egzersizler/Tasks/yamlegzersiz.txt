@@ -7,3 +7,4 @@ Portakal - 300 - turuncu
 Elma - 400 - sarı
 Karpuz - 200 - kırmızı
 
+Tüm egzersizi selam.yaml dosyalarında gerçekleştirebiliriz. 
