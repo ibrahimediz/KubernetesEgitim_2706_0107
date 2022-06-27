@@ -1,1 +1,7 @@
-Banu
+kubectl run webfrontend --image=nginx
+kubectl run webdb --image=mariadb
+
+kubectl get pods
+
+kubectl describe pod webfrontend
+kubectl describe pod webdb

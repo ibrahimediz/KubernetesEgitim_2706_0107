@@ -1,1 +1,5 @@
-Mehmet
+kubectl run webfrontend --image=nginx
+kubectl run webdb --image=mariadb
+kubectl get pods
+kubectl describe pod webdb
+kubectl describe pod webfrontend

@@ -1,1 +1,6 @@
-Özge
+
+
+kubectl run webfronted --image=nginx 
+kubectl run webdb --image=mariadb
+kubectl describe webdb
+kubectl describe webfronted

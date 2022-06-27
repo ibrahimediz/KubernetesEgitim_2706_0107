@@ -1,1 +1,4 @@
-Tahir
+kubectl run webfrontend --image=nginx
+kubectl run webdb --image=mariadb
+kubectl describe pod webfrontend
+kubectl describe pod webdbkubectl run webfronted --image=

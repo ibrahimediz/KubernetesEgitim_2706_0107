@@ -24,11 +24,6 @@ detaylar:
       kalori: 400
       renk: "Yeşil"
  - Elma:
-    kalori: 500
-    renk: "Kirmizi"
+      kalori: 500
+      renk: "Kirmizi"
 
-
-
-
-
-# 

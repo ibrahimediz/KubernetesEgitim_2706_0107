@@ -1,1 +1,11 @@
-Özlem
+Özlem 
+iki pod oluşturulması isteniyor 
+1. nginx imajı ile webfrontend ismi ile bir pod oluşturalım
+2. mariadb imajı ile webdb ismi ile bir pod oluşturalım
+3. bu podların tanımlarına bakalım. 
+tüm bu kodları podEgzeris.txt dosyası içerisinde sırasıyla yazabilir.
+
+kubectl webfrontend --image=nginx  //webfrontend image  oluşturuyor.
+kubectl webdb --image=mariadb  //webdb ile image oluşturuyor.
+
+kubectl get pods  //tüm podları getirir.
