@@ -20,4 +20,4 @@ spec:
           image: httpd
   selector:
     matchLabels:
-      app: myapp
+      app: innovaapp
