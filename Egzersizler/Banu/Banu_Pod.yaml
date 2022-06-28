@@ -1,1 +1,10 @@
-Banu
+apiVersion: v1
+kind: Pod
+metadata:
+    name: banu
+    labels:
+        app: innova_app
+spec: 
+    containers:
+      - name: backend
+        image: httpd

@@ -1,1 +1,11 @@
-Tahir
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tahir
+  labels: 
+    app: innova_app
+    tier: frontend
+spec:
+  containers:
+    - name: backend
+      image: httpd

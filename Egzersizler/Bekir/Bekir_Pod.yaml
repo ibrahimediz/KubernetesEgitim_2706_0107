@@ -1,1 +1,11 @@
-Bekir
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bekir
+  labels:
+    app: innova_app
+spec:
+  containers:
+    - name: backend
+      image: httpdBekir
+      

@@ -1,1 +1,11 @@
-Mustafa
+apiVersion: v1
+kind: Pod
+metadata:
+  name: Mustafa
+  labels:
+    app: innova_app
+    tier: backend
+spec:
+  containers:
+    - name: backend
+      image: httpd

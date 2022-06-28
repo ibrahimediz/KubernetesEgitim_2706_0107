@@ -1,1 +1,11 @@
-Köksal
+apiVersion: v1
+kind: Pod
+metadata:
+  name: koksal
+  labels: 
+    app: innova_app
+    tier: backend
+spec:
+  containers:
+    - name: backend 
+      image: httpd

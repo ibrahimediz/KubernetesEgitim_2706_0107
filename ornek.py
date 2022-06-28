@@ -9,3 +9,4 @@ for item in liste:
     with open(f"Egzersizler/{item}/{item}_{fileName}.yaml", "w") as f:
         f.write(f"{item}")
     print(f"{item} klasörü oluşturuldu")
+

@@ -1,1 +1,13 @@
-Ayşenur
+#Ayşenur
+apiVersion: v1
+kind: Pod
+metadata: 
+ name: aysenur
+ labels:
+  app: innova_app
+  tier: backend backend
+spec: 
+ containers:
+   - name: backend
+     image: centos
+httpd

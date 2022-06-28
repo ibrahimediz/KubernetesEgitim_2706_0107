@@ -1,1 +1,17 @@
-Özlem
+# Özlem
+# 1. Görevimiz bir yaml dosyası pod oluşturmak
+# 2. Bu podun ismi isminiz olsun 
+# 3. app ismi innova_app
+# 4. container olarak "centos" imajını kullanan adı backend olan container oluşturalım 
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ozlem
+  labels: 
+    app: innova_app
+    tier: frontend
+spec:
+  containers:
+    - name: backend
+      image: httpd

@@ -1,1 +1,11 @@
-Özge
+apiVersion: v1
+kind: Pod
+metadata:
+ name: Ozge
+ labels:
+  app: innova-app
+  backend: evet
+spec:
+  containers:
+    - name: backend
+      image: httpd

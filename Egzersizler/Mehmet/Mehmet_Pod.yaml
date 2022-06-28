@@ -1,1 +1,11 @@
-Mehmet
+apiVersion: v1
+kind: Pod
+metadata:
+  name: MehmetPod
+  labels:
+     app: innova_app 
+spec:
+  containers:
+  - name: backend
+    image: centos:latest 
+ 
