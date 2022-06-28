@@ -1,0 +1,5 @@
+1. Görevimiz Replication Controller yapısını ayağa kaldırmak
+2. Bu görev için bir yaml dosyası oluşturalım
+3. RC nin ismi isminiz_rc olsun
+4. replica sayısı 4 olsun
+5. container olarak httpd containerı kullanılabilir. ismi backend olsun. Etiketinde app: myapp 
