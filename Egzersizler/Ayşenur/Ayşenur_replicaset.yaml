@@ -1,1 +1,24 @@
 # Ayşenur
+#kubectl create -f ./Ayşenur_Pod.yaml
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: aysenurrs1
+  labels:
+    app: myapprc
+spec:
+  replicas: 4
+  template:
+    metadata:
+      name: myappbackend
+      labels:
+        app: innova_app
+    spec:
+      containers:
+        - name: backend
+          image: httpd
+  selector:
+    matchLabels:
+      app: innova_app
+    

@@ -1,1 +1,25 @@
 # Mustafa
+# kubectl create -f Mustafa_Pod.yaml
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: mustafars1
+  labels:
+    app: mustafars1
+spec:
+  replicas: 5
+  template:
+    metadata:
+      name: Mustafa
+      labels:
+        app: innova_app
+    spec:
+      containers:
+        - name: backend
+          image: httpd
+  selector:
+    matchLabels:
+      app: innova_app
+
+#kubectl create -f Egzersizler/Mustafa/ReplicaSet/Mustafa_replicaset.yaml

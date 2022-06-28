@@ -1,1 +1,22 @@
 # Banu
+# kubectl create pod -f Banu_Pod.yaml
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: banurs1
+  labels: 
+    app: banukapp
+spec:
+  replicas: 5
+  template:
+    metadata:
+      name: banu
+      labels:
+          app: innova_app
+    spec: 
+      containers:
+        - name: backend
+          image: httpd
+  selector:
+    matchLabels:
+      app: innova_app

@@ -1,17 +1,18 @@
 # Talha
+# kubectl apply -f Talha_Pod.yaml
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata: 
   name: talhars1
   labels:
-    app: myapp_rc
+    app: innova_app_rs
 spec:
   replicas: 4
   template:
     metadata:
-      name: myappbackend
+      name: talhapod
       labels: 
-        app: myapp
+        app: innova_app
         tier: backend
         type: backend
     spec:
@@ -20,4 +21,4 @@ spec:
           image: httpd
   selector:
     matchLabels:
-      app: innovaapp
+      app: innova_app

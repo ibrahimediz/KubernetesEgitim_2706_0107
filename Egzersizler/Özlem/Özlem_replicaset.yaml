@@ -1,23 +1,33 @@
 # Özlem
 
+# 1.  Görevimiz öncelikle önceden oluşturuğumuz pod dosyası ile bir pod oluşturmak için gerekli komutu 
+# açıklama satırı şeklinde yazmak
+# 2.  Ardından ismi isminizrs1 olan bir replicaset oluşturmak 
+# 3.  bu replicaset içerisinde yer alan template için mevcut pod dosyanız içerisindeki bilgileri kullanabilirsiniz
+# 4.  replicaset selector bölümüne mathlabel ile innova_app yazalım
+
+# Pod komutu:
+   #kubectl create -f Documents/Pods/Özlem_Pod.yaml
+
+
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: replicaset1
+  name: ozlemrs1
   labels:
-    app: myapprc
+    app: ozlemaslan
 spec:
   replicas: 4
   template:
     metadata:
-      name: myappbackend
+      name: ozlemaslan
       labels:
-        app: myapp
+        app: innova_app
     spec:
       containers:
-        - name: backend
+        - name: ozlem
           image: httpd
   selector:
     matchLabels:
-      app: myapp
+      app: innova_app
     

@@ -1,0 +1,23 @@
+
+#  kubectl apply -f Bekir_pod.yaml
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: bekirrs1
+  labels:
+    app: innova_app
+spec:
+  replicas: 4
+  template:
+    metadata:
+      name: myapp
+      labels:
+        app: innova_app
+    spec:
+      containers:
+      - name: backend
+        image: httpd
+  selector:
+    matchLabels:
+      app: innova_app

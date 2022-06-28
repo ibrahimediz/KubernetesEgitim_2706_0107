@@ -1,1 +1,25 @@
-Köksal
+# # 1.  Görevimiz öncelikle önceden oluşturuğumuz pod dosyası ile bir pod oluşturmak için gerekli komutu 
+# # açıklama satırı şeklinde yazmak
+# # 2.  Ardından ismi isminizrs1 olan bir replicaset oluşturmak 
+# # 3.  bu replicaset içerisinde yer alan template için mevcut pod dosyanız içerisindeki bilgileri kullanabilirsiniz
+# # 4.  replicaset selector bölümüne mathlabel ile innova_app yazalım
+
+# kubectl create -f ./Köksal_pod.yaml
+
+apiVersion: v1
+kind: ReplicationController
+metadata: 
+  name: koksal_rc
+  labels:
+    app: innova_app
+spec:
+  replicas: 4
+  template:
+    metadata:
+      name: koksal_rep1
+      labels: 
+        app: myapp
+    spec:
+      containers:
+        - name: backend
+          image: httpd

@@ -1,1 +1,23 @@
-# Fatih
+#kubectl apply -f .\Fatih_Pod.yaml
+
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: fatihrs1
+  labels:
+    app: innova_app_rs
+spec:
+  replicas: 4
+  template:
+    metadata:
+      name: backend
+      labels:
+        app: innova_app
+    spec:
+      containers:
+        - name: httpd_container
+          image: httpd
+  selector:
+    matchLabels:
+      app: innova_app        

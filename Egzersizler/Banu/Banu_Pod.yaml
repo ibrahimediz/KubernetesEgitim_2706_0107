@@ -1,3 +1,4 @@
+# kubectl create pod -f Banu_Pod.yaml
 apiVersion: v1
 kind: Pod
 metadata:

@@ -1,24 +1,25 @@
 # Özge
+#kubectl create -f Özge_Pod.yaml
 
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: replicaset1
+  name: ozgers
   labels:
-    app: myapprc
+    app: myapprs
 spec:
   replicas: 4
   template:
     metadata:
-      name: myappbackend
-      labels:
-        app: myapp
-        tier: backend
-        type: backend
-    spec:
+     name: Ozge
+     labels:
+       app: innova-app
+       backend: evet
+    spec:   
       containers:
-        - name: backend
-          image: httpd
+       - name: backend
+         image: httpd
   selector:
     matchLabels:
-      app: myapp
+      app: innova-app
+

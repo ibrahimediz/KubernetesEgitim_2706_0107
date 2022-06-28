@@ -1,3 +1,4 @@
+#kubectl create -f Mehmet_Pod.yaml
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
@@ -10,12 +11,12 @@ spec:
     metadata:
       name: myappbackend
       labels:
-        app: myapp
+        app: innova_app
     spec:
       containers:
         - name: backend
           image: httpd
   selector:
     matchLabels:
-      app: myapp
+      app: innova_app
     
