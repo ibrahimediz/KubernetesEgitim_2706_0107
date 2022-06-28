@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: xxxx
+  labels:
+    app: ccc
+    tier: back
+spec:
+  containers:
+    - name: Containerın ismi #Container İsmi
+      image: nginx
