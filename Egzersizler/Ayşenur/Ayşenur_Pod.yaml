@@ -9,5 +9,4 @@ metadata:
 spec: 
  containers:
    - name: backend
-     image: centos
-httpd
+     image: httpd
