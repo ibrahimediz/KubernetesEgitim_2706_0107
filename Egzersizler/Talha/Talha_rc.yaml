@@ -1,1 +1,17 @@
-Talha
+apiVersion: v1
+kind: ReplicationController
+metadata: 
+  name: talharc
+  labels:
+    app: innova_app
+spec:
+  replicas: 4
+  template:
+    metadata:
+      name: talhapod
+      labels: 
+        app: myapp
+    spec:
+      containers:
+        - name: backend
+          image: httpd

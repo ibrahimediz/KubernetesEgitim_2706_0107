@@ -1,19 +1,26 @@
-Özlem
+# Özlem
+# 1. Görevimiz Replication Controller yapısını ayağa kaldırmak
+# 2. Bu görev için bir yaml dosyası oluşturalım
+# 3. RC nin ismi isminiz_rc olsun
+# 4. replica sayısı 4 olsun
+# 5. container olarak httpd containerı kullanılabilir. ismi backend olsun. Etiketinde app: myapp 
+
+
 apiVersion: v1
 kind: ReplicationController
 metadata: 
-  name: ornekreplicationcontroller
+  name: ozlemrc
   labels:
     app: innova_app
 spec:
-  replicas: 5
+  replicas: 4
   template:
     metadata:
-      name: selam1
+      name: ozlem
       labels: 
-        app: selam
-        tier: frontend
+        app: myapp
+        tier: backend
     spec:
       containers:
-        - name: nginx-container
+        - name: backend
           image: httpd

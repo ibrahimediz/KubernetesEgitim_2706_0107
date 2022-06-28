@@ -1,1 +1,17 @@
-Mustafa
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: mustafarc
+  labels:
+    app: mustafa_app
+spec:
+  replicas: 4
+  template:
+    metadata:
+      name: backend
+      labels:
+        app: myapp
+    spec:
+       containers:
+         - name: backend
+           image: httpd

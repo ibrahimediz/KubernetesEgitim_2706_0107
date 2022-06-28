@@ -1,1 +1,17 @@
-Özge
+apiVersion: v1
+kind: ReplicationController
+metadata: 
+  name: ozgerc
+  labels:
+    app: myapp_rc
+spec:
+  replicas: 4 
+  template:
+    metadata:
+      name: myapp_backend
+      labels: 
+        app: myapp
+    spec:
+      containers:
+        - name: backend
+          image: httpd

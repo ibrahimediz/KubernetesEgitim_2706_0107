@@ -1,1 +1,17 @@
-Bekir
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: bekirrc
+  labels:
+    app: myapp
+spec:
+  replicas: 4
+  template:
+    metadata:
+      name: bekir_rc
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: backend
+        image: httpd

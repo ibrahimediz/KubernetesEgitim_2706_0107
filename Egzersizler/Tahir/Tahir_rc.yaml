@@ -1,1 +1,17 @@
-Tahir
+apiVersion: v1
+kind: ReplicationController
+metadata: 
+  name: tahir_rc
+  labels:
+    app: innova_app
+spec:
+  replicas: 4
+  template:
+    metadata:
+      name: tahir_rep1
+      labels: 
+        app: myapp
+    spec:
+      containers:
+        - name: backend
+          image: httpd

@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ReplicationController
+metadata: 
+  name: aysenur_rc
+  labels:
+    app: innova_app
+spec:
+  replicas: 4
+  template:
+    metadata:
+      name: selam1
+      labels: 
+        app: myapp
+    spec:
+      containers:
+        - name: backend
+          image: httpd

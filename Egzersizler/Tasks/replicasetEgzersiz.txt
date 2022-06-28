@@ -1,0 +1,5 @@
+1.  Görevimiz öncelikle önceden oluşturuğumuz pod dosyası ile bir pod oluşturmak için gerekli komutu 
+açıklama satırı şeklinde yazmak
+2.  Ardından ismi isminizrs1 olan bir replicaset oluşturmak 
+3.  bu replicaset içerisinde yer alan template için mevcut pod dosyanız içerisindeki bilgileri kullanabilirsiniz
+4.  replicaset selector bölümüne mathlabel ile innova_app yazalım

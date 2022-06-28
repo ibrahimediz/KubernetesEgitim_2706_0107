@@ -8,10 +8,9 @@ spec:
   replicas: 4
   template:
     metadata:
-    name: backend
-    labels:
-      app: myapp
-      tier: backend
+      name: backend
+      labels:
+        app: myapp
     spec:
       containers:
         - name: httpd_container

@@ -3,16 +3,15 @@ kind: ReplicationController
 metadata: 
   name: mehmet_rc
   labels:
-    app: myapp
+    app: innova_app
 spec:
   replicas: 4
   template:
     metadata:
-      name: backend
+      name: myappName
       labels: 
         app: myapp
-        tier: frontend
     spec:
       containers:
-        - name: nginx-container
+        - name: backend
           image: httpd

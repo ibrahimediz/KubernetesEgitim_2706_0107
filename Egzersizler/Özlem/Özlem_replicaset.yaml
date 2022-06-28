@@ -1,0 +1,23 @@
+# Özlem
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replicaset1
+  labels:
+    app: myapprc
+spec:
+  replicas: 4
+  template:
+    metadata:
+      name: myappbackend
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: backend
+          image: httpd
+  selector:
+    matchLabels:
+      app: myapp
+    
