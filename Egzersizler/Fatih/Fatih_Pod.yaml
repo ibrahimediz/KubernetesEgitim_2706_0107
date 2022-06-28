@@ -1,1 +1,10 @@
-Fatih
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fatih
+  labels:
+    app: innova_app
+spec:
+  containers:
+    - name: backend
+      image: httpd

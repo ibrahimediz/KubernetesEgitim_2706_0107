@@ -1,11 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: xxxx
+  name: TalhaPod
   labels:
-    app: ccc
-    tier: back
+    app: InnovaApp
 spec:
   containers:
-    - name: Containerın ismi #Container İsmi
-      image: nginx
+    - name: backend
+      image: httpd
