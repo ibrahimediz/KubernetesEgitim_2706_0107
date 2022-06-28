@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment1
+  labels:
+    app: myappdep
+spec:
+  replicas: 4
+  template:
+    metadata:
+      name: myappbackend
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: backend
+          image: httpd
+  selector:
+    matchLabels:
+      app: myapp
+    
