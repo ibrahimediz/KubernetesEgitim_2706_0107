@@ -1,1 +1,9 @@
-# Tahir
+#1. Daha önce oluşturduğumuz deployment içinde pod içinde container olarak nginx kullandığımızdan emin olalım
+#image: nginx yapıldı
+
+#2. deployment dosyasını çalıştırmak için gereken kodu açıklama satırı şeklinde yazalım
+#kubectl create -f Tahir_deployment.yaml
+3. bir node port üretelim service kullanarak
+4. bu servisi mevcut deployment'a bağlayalım 
+5. ardından bu servisin liste üzerinden doğrulamasını yapacak kodu yazalım  (kubectl ile)
+6. servisi test edecek kodu yazalım (minikube ile)

@@ -1,1 +1,20 @@
-# Bekir
+# kubectl apply -f deployment.yaml
+
+# kubectl get svc
+
+# minikube service myappservice
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: myappservice
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30008
+      protocol: TCP
+      name: http
+  selector:
+    app: myapp

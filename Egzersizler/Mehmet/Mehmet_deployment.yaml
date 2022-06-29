@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: httpd
+          image: nginx
   selector:
     matchLabels:
       app: myapp

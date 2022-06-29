@@ -1,1 +1,33 @@
 # Talha
+# 1. Daha önce oluşturduğumuz deployment içinde pod içinde container olarak nginx kullandığımızdan emin olalım
+
+# 2. deployment dosyasını çalıştırmak için gereken kodu açıklama satırı şeklinde yazalım
+## kubectl create -f Egzersizler/Talha/Talha_deployment.yaml
+
+# 3. bir node port üretelim service kullanarak
+## kubectl create -f Egzersizler/Talha/Talha_serviceEgzersiz.yaml
+
+# 4. bu servisi mevcut deployment'a bağlayalım
+## app:myapp
+
+# 5. ardından bu servisin liste üzerinden doğrulamasını yapacak kodu yazalım  (kubectl ile)
+## kubectl get svc
+## myappservice   NodePort    10.103.23.7   <none>        80:30007/TCP   15s
+
+# 6. servisi test edecek kodu yazalım (minikube ile)
+##  minikube service myappservice
+apiVersion: v1
+kind: Service
+metadata:
+  name: myappservice
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30007
+      protocol: TCP
+      name: http
+  selector:
+    app: myapp
+    

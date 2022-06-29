@@ -2,5 +2,5 @@
 2. deployment dosyasını çalıştırmak için gereken kodu açıklama satırı şeklinde yazalım
 3. bir node port üretelim service kullanarak
 4. bu servisi mevcut deployment'a bağlayalım 
-5. ardından bu servisin liste üzerinden doğrulamasını yapacak kodu yazalım 
-6. servisi test edecek kodu yazalım 
+5. ardından bu servisin liste üzerinden doğrulamasını yapacak kodu yazalım  (kubectl ile)
+6. servisi test edecek kodu yazalım (minikube ile)
