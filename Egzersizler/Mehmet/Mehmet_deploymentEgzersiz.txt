@@ -1,1 +1,5 @@
-kubectl apply -f Mehmet_deploymen
+kubectl apply -f Mehmet_deployment
+kubectl edit deployment.apps/deployment1
+kubectl set image deployment.apps/deployment1 backend=nginx
+kubectl get all
+kubectl rollout history deployment.apps/deployment1

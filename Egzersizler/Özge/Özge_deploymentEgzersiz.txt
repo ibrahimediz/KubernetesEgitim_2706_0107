@@ -1,8 +1,12 @@
 # Özge
 
 1. Oluştumuş olduğunuz deployment'ı kubectl kullanarak çalıştırmak için gereken kodu yazınız.apply
-kubectl create -f deploym
+      #kubectl create -f deployment.yaml
 2. Çalışan deployment üzerinde değişiklik yapmak için gerekli kodu yazını - edit
+      #kubectl apply -f deployment.yaml
 3. çalışan deployment için image değişikliğini set komutu ile yazınız
+      #kubectl set image deployment.apps/deployment1 httpd=httpd:latest
 4. tüm nesneleri listeleyen komutu yazınız
+      #kubectl get all
 5. mevcut deployment için yapılan güncellemelerin tarihçesine bakınız
+      #bubectl rollout history deployment.apps/deployment1

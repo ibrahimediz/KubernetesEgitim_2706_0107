@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: httpd:2.4.54-bullseye
+          image: nginx
   selector:
     matchLabels:
       app: myapp

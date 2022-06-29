@@ -1,1 +1,7 @@
 # Ayşenur
+
+kubectl create -f deployment.yaml
+kubectl apply -f deployment.yaml
+kubectl set image deployment.apps/deployment1 httpd=ngnix --record=True
+kubectl get all
+kubectl rollout history deployment.apps/deployment1

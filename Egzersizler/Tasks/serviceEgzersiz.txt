@@ -1,0 +1,6 @@
+1. Daha önce oluşturduğumuz deployment içinde pod içinde container olarak nginx kullandığımızdan emin olalım
+2. deployment dosyasını çalıştırmak için gereken kodu açıklama satırı şeklinde yazalım
+3. bir node port üretelim service kullanarak
+4. bu servisi mevcut deployment'a bağlayalım 
+5. ardından bu servisin liste üzerinden doğrulamasını yapacak kodu yazalım 
+6. servisi test edecek kodu yazalım 

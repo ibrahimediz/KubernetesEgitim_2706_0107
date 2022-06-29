@@ -3,3 +3,7 @@
 3. çalışan deployment için image değişikliğini set komutu ile yazınız
 4. tüm nesneleri listeleyen komutu yazınız
 5. mevcut deployment için yapılan güncellemelerin tarihçesine bakınız
+
+
+kubectl rollout history deployment.apps/deployment1 --to-revision=2
+--to-revision ile isteğimiz adıma geri dönebiliriz

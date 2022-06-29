@@ -1,1 +1,5 @@
-# Banu
+kubectl create -f Egzersizler/Banu/Banu_deployment.yaml
+kubectl edit deployment banu_dep --record=true
+kubectl set image deployment.apps/banu_dep nginx=httpd:latest
+kubectl get all
+kubectl rollout history deployment.apps/banu_dep

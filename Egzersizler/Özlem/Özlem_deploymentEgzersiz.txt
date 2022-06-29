@@ -4,3 +4,9 @@
 3. çalışan deployment için image değişikliğini set komutu ile yazınız
 4. tüm nesneleri listeleyen komutu yazınız
 5. mevcut deployment için yapılan güncellemelerin tarihçesine bakınız
+
+kubectl create -f Egzersizler/Özlem/Özlem_deployment.yaml
+kubectl edit deployment deployment1
+kubectl set image deployment.apps/deployment1 nginx:nginx
+kubectl get all
+kubectl rollout history
