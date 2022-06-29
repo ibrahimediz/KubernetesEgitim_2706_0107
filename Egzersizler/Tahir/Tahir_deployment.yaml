@@ -1,21 +1,31 @@
 # Tahir
-apiVersion: apps/v1
-kind: Deployment
+# 1. Daha önce oluşturduğumuz deployment içinde pod içinde container olarak nginx kullandığımızdan emin olalım
+
+# 2. deployment dosyasını çalıştırmak için gereken kodu açıklama satırı şeklinde yazalım
+## kubectl create -f Egzersizler/Tahir/Tahir_deployment.yaml
+
+# 3. bir node port üretelim service kullanarak
+## kubectl create -f Egzersizler/Tahir/Tahir_serviceEgzersiz.yaml
+
+# 4. bu servisi mevcut deployment'a bağlayalım
+## app:myapp
+
+# 5. ardından bu servisin liste üzerinden doğrulamasını yapacak kodu yazalım  (kubectl ile)
+## kubectl get svc
+
+# 6. servisi test edecek kodu yazalım (minikube ile)
+##  minikube service myappservice
+apiVersion: v1
+kind: Service
 metadata:
-  name: deployment1
-  labels:
-    app: myappdep
+  name: myappservice
 spec:
-  replicas: 4
-  template:
-    metadata:
-      name: myappbackend
-      labels:
-        app: myapp
-    spec:
-      containers:
-        - name: backend
-          image: nginx
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30007
+      protocol: TCP
+      name: http
   selector:
-    matchLabels:
-      app: myapp
+    app: myapp
