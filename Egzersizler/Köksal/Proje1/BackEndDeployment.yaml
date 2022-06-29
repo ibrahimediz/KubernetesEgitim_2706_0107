@@ -13,9 +13,12 @@ spec:
       labels:
         app: myappBackEnd
     spec:
+      # nodeName: node1
       containers:
         - name: backendContainer
           image: httpd
+      # nodeSelector:
+      #   donamim : eski_donamim
   selector:
     matchLabels:
       app: myappBackEnd
