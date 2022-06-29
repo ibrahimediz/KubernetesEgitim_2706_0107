@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deploymentndsscheduled
+  name: deploymentbackend
   labels:
-    app: myappdep
+    app: myappback
 spec:
   replicas: 5
   template:
@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: backend
-          image: httpd 
+          image: ozgeaydiner/hello-world:latest
   selector:
     matchLabels:
       app: myapp
+    

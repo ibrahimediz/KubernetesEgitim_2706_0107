@@ -1,20 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deploymentndsscheduled
+  name: depbackend
   labels:
-    app: myappdep
+    app: depbackend
 spec:
   replicas: 5
   template:
     metadata:
-      name: myappbackend
+      name: depbackend
       labels:
         app: myapp
+        tier: backend
     spec:
       containers:
         - name: backend
-          image: httpd 
+          image: flask
   selector:
     matchLabels:
-      app: myapp
+      app: backend

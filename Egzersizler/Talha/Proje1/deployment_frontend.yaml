@@ -1,20 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deploymentndsscheduled
+  name: depfront
   labels:
     app: myappdep
 spec:
   replicas: 5
   template:
     metadata:
-      name: myappbackend
+      name: myappfront
       labels:
         app: myapp
+        tier: front
     spec:
       containers:
-        - name: backend
-          image: httpd 
+        - name: front
+          image: httpd
   selector:
     matchLabels:
       app: myapp
+  

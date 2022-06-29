@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backenddeploy
+  labels:
+    environment: backenddeploy
+    tier: backend
+spec:
+  replicas: 5
+  template:
+    metadata:
+      name: myappBackEnd
+      labels:
+        app: myappBackEnd
+    spec:
+      # nodeName: node1
+      containers:
+        - name: backendcontainer
+          image: ozgeaydiner/hello-world:latest
+  selector:
+    matchLabels:
+      app: myappBackEnd
+  

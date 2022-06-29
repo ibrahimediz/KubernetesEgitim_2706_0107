@@ -1,0 +1,61 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment1
+  labels:
+    app: myapp
+    tier: frontend
+spec:
+  replicas: 5
+  template:
+    metadata:
+      name: myappfrontend
+      labels:
+        app: myappfrontend
+    spec:
+      containers:
+        - name: frontend
+          image: nginx
+  selector:
+    matchLabels:
+      app: myappfrontend
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment2
+  labels:
+    app: myapp
+    tier: backend
+spec:
+  replicas: 5
+  template:
+    metadata:
+      name: myappbackend
+      labels:
+        app: myappbackend
+    spec:
+      containers:
+        - name: backend
+          image: flaski/flaski
+  selector:
+    matchLabels:
+      app: myappbackend
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myappservice
+  labels:
+    app: myapp
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30008
+      protocol: TCP
+      name: http
+  selector:
+    app: myappfrontend
