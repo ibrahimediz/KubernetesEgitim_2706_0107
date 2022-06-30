@@ -1,1 +1,37 @@
 # Özge
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploymentback
+  labels:
+    app: myappbackend
+spec:
+  replicas: 5
+  template:
+    metadata:
+      name: myappback
+      labels:
+        app: myappbackend
+    spec:
+      containers:
+        - name: backend
+          image: nginx
+          ports:
+          - name: innovanodejs-port
+            containerPort: 3000
+          livenessProbe:
+            httpGet:
+              path: / # sayfa varsa onu yazalım /healt
+              port: innovanodejs-port
+            initialDelaySeconds: 30
+            periodSeconds: 20
+            timeoutSeconds: 20
+          readinessProbe:
+            httpGet:
+              path: / # sayfa varsa onu yazalım /healt
+              port: innovanodejs-port
+            initialDelaySeconds: 30
+            timeoutSeconds: 40
+  selector:
+    matchLabels:
+      app: myappbackend

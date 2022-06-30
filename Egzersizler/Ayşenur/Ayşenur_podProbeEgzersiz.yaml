@@ -1,1 +1,39 @@
 # Ayşenur
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploymentliveness
+  labels:
+    app: myappbackend
+spec:
+  replicas: 5
+  template:
+    metadata:
+      name: myappbackend
+      labels:
+        app: myappbackend
+    spec:
+      containers:
+        - name: backend
+          image: nginx
+          ports:
+          - name: innovanodejs-port
+            containerPort: 3000
+          livenessProbe:
+            httpGet:
+              path: / 
+              port: innovanodejs-port
+            initialDelaySeconds: 20
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /
+              port: innovanodejs-port
+            initialDelaySeconds: 30
+            timeoutSeconds: 40  
+  selector:
+    matchLabels:
+      app: myappbackend
+
+       
