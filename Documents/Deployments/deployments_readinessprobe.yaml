@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploymentreadiness
+  labels:
+    app: myappdep
+spec:
+  replicas: 5
+  template:
+    metadata:
+      name: myappbackend
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: backend
+          image: nginx
+          ports:
+          - name: nodejs-port
+            containerPort: 3000
+          livenessProbe:
+            httpGet:
+              path: / # sayfa varsa onu yazalım /healt
+              port: nodejs-port
+            initialDelaySeconds: 40
+            periodSeconds: 15
+            timeoutSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: / # sayfa varsa onu yazalım /healt
+              port: nodejs-port
+            initialDelaySeconds: 40
+            timeoutSeconds: 30
+  selector:
+    matchLabels:
+      app: myapp
+
+       
