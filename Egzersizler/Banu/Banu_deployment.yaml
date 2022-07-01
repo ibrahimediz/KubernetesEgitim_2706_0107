@@ -1,17 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: banu_dep
+  name: banu-dep
   labels:
-    app: myapp
+    app: myappdep-banu
 spec:
   replicas: 5
   template:
     metadata:
-      name: backend
+      name: myappbackend
       labels:
         app: myapp
     spec:
       containers:
         - name: backend
-        image: nginx
+          image: httpd
+  selector:
+    matchLabels:
+      app: myapp
+    
