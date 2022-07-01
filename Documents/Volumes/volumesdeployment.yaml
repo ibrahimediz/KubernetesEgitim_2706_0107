@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webdeployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: k8s-demo
+          image: edizdesign/nodejs-image-demo
+          ports:
+            - name: nodejs-demo
+              containerPort: 3000
+          volumeMounts:
+            - mountPath: /myvol
+              name: myvolume
+      volumes:
+        - name: myvolume
+          awsElasticBlockStore:
+            volumeID: vol-09d175b7c0f758149
