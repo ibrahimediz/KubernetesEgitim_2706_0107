@@ -1,7 +1,7 @@
 ## TODO burada liste eklenecek
 liste = ["Fatih","Gokhan","Mehmet","Ayşenur","Tahir","Banu","Bekir","Emre","Köksal","Mustafa","Talha","Özge","Özlem","İbrahim"]
 folderName = "Egzersizler"
-fileName = "podProbeEgzersiz" 
+fileName = "secretEgzersiz" 
 dosyatip = 1
 import os
 for item in liste:

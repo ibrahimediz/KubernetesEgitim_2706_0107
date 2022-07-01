@@ -1,9 +1,9 @@
 # Talha
-1. nginx imajına sahip bir containerın yer aldığı 5 replicası olan etiketi myappbackend olan bir deployment oluşturalım
-2. bu deployment içerisinde liveness ve readiness probları yazalım. 
-    a. liveness probe için periyodikZaman=>20 initialDelaySecond => 30 timeout => 20
-    b. readiness probe için initialDelaySecond => 30 timeout => 40
-3. her iki probe için bir port alias üzerinden işlem yapalım port alias için innovanodejs-port yazalım
+# 1. nginx imajına sahip bir containerın yer aldığı 5 replicası olan etiketi myappbackend olan bir deployment oluşturalım
+# 2. bu deployment içerisinde liveness ve readiness probları yazalım. 
+#     a. liveness probe için periyodikZaman=>20 initialDelaySecond => 30 timeout => 20
+#     b. readiness probe için initialDelaySecond => 30 timeout => 40
+# 3. her iki probe için bir port alias üzerinden işlem yapalım port alias için innovanodejs-port yazalım
 apiVersion: apps/v1
 kind: Deployment
 metadata:

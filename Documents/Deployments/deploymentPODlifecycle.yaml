@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deplifecycle
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lifecycle
+  template:
+    metadata:
+      labels:
+        app: lifecycle
+    spec:
+      initContainers:
+      - name: init-container
+        image: busybox
+        # command: ["/bin/sh"]
+        # args: ["-c", "echo 'Hello World'"]
+        command: ['sh','-c', 'sleep 10']
+      containers:
+        - name: lifecycle-contianer
+          image: busybox
+          command: ['sh','-c', 'echo $(date +%s): Running >> /timing && echo "Uygulama Çalışıyor" && /bin/sleep 100']
+          readinessProbe:
+            exec:
+              command: ['sh','-c', 'echo $(date +%s): readinessProbe >> /timing']
+            initialDelaySeconds: 35
+            timeoutSeconds: 30
+          livenessProbe:
+            exec:
+              command: ['sh','-c', 'echo $(date +%s): livenessProbe >> /timing']
+            initialDelaySeconds: 35
+            timeoutSeconds: 30
+          lifecycle:
+            postStart:
+              exec:
+                command: ['sh','-c', 'echo $(date +%s): posStart  >> /timing']
+            preStop:
+              exec:
+                command: ['sh','-c', 'echo $(date +%s): preStop  >> /timing']
