@@ -1,3 +1,3 @@
-1. Dökümanlar içerisinde yer alan ConfigTask klasörü içindeki nginx.yaml dosyası için bir nodeport servis yazını
+1. Dökümanlar içerisinde yer alan ConfigMap klasörü içindeki nginx.yaml dosyası için bir nodeport servis yazını
 servisimizin ismi "selamservice" olsun 
 port için 80 kullanabilirsiniz. protocol TCP olmalıdır.

@@ -1,1 +1,41 @@
 # Özlem
+# 1. Dökümanlar içerisinde yer alan ConfigMap klasörü içindeki nginx.yaml dosyası için bir nodeport servis yazını
+# servisimizin ismi "selamservice" olsun 
+# port için 80 kullanabilirsiniz. protocol TCP olmalıdır.
+
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: deploymentozlem
+#   labels:
+#     app: myappdep
+# spec:
+#   replicas: 3
+#   template:
+#     metadata:
+#       name: myappbackend
+#       labels:
+#         app: myapp
+#     spec:
+#       containers:
+#         - name: backend
+#           image: nginx
+#   selector:
+#     matchLabels:
+#       app: myapp
+    
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: selamservice
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30008
+      protocol: TCP
+      name: http
+  selector:
+    app: myapp
