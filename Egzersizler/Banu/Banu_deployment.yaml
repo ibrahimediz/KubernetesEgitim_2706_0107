@@ -14,8 +14,26 @@ spec:
     spec:
       containers:
         - name: backend
-          image: httpd
+          image: nginx
   selector:
     matchLabels:
       app: myapp
-    
+  template:
+    metadata:
+      labels:
+        app: depSecBanusPods
+      spec:
+        containers:
+          name: banu-secret
+            image: nginx
+            ports:
+              name: nginx-port
+              containerPort: 80
+            volumeMounts:
+              name: secret-volume
+              mountPath: /etc/creds
+              readonly: true
+        volumes:
+            name: secret-volume
+            secret:
+              secretName: banu-secret 
