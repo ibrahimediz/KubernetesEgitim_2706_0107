@@ -1,7 +1,7 @@
 ## TODO burada liste eklenecek
 liste = ["Fatih","Gokhan","Mehmet","Ayşenur","Tahir","Banu","Bekir","Emre","Köksal","Mustafa","Talha","Özge","Özlem","İbrahim"]
 folderName = "Egzersizler"
-fileName = "secretEgzersiz" 
+fileName = "configSvc" 
 dosyatip = 1
 import os
 for item in liste:
