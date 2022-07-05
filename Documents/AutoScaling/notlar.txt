@@ -1,0 +1,5 @@
+/* 
+200m => 200 milicpu (200 milisaniye)
+200m => işlemcinin %20 sini kullanır
+iki işlemci varsa tekinin %20 sini kullanır
+*/

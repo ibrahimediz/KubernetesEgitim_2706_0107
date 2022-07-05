@@ -1,0 +1,18 @@
+toleration:
+    -key: "key"
+     operator: "Equal"
+     value: "value"
+     effect: "NoSchedule"
+
+effectler
+* NoSchedule
+* PreferNoSchedule
+* NoExecute => işin içinde tahliye => tolaretionSeconds: 3600 girilmezse kural geçerli olmaz
+* PreferNoExecute
+
+Disk dolması vb. durumlarda
+    node.kubernets.io/unreachable:
+        operator: "Equal"
+        value: "true"
+        effect: "NoExecute
+        tolaretionSeconds:6000

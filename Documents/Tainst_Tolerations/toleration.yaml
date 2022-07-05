@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: toleration-example
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: toleration-example
+  template:
+    metadata:
+      labels:
+        app: toleration-example
+    spec:
+      containers:
+       - name: k8s-ornek
+         image: edizdesign/nodejs-image-demo
+         ports:
+          - name: http-port
+            containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: toleration-example-2
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: toleration-example-2
+  template:
+    metadata:
+      labels:
+        app: toleration-example-2
+    spec:
+      tolerations:
+        - key: "type"
+          operator: "Equal"
+          value: "specialnode"
+          effect: "NoSchedule"
+      containers:
+       - name: k8s-ornek
+         image: edizdesign/nodejs-image-demo
+         ports:
+          - name: http-port
+            containerPort: 80
+
+
+
+        # - key: node-role.kubernetes.io/master
+        #   effect: NoSchedule
